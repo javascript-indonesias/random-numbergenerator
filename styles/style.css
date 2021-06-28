@@ -13,6 +13,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
 .card-detail {
@@ -33,6 +34,7 @@ body {
     line-height: 1em;
     margin: 0 0 24px;
     text-align: center;
+    font-family: 'Lato', sans-serif;
 }
 
 .form-range {
@@ -87,4 +89,35 @@ body {
 
 hr {
     border: 1px solid #ccc;
+}
+
+.card-result {
+    display: flex;
+    flex-flow: column;
+    margin: 1px 15px 2em 15px;
+    max-width: 600px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card-result .content-card {
+    margin: 2em;
+}
+
+.card-result h1 {
+    line-height: 1em;
+    margin: 0 0 24px;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+}
+
+.result-list ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.result-list ul li {
+    list-style: none;
 }
