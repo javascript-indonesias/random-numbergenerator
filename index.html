@@ -14,6 +14,10 @@
             href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400;1,700&display=swap"
             rel="stylesheet"
         />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap"
+            rel="stylesheet"
+        />
         <title>Random Number Generator</title>
     </head>
     <body>
@@ -30,17 +34,21 @@
                             type="number"
                             name="input-start-range"
                             id="input-start-range"
+                            placeholder="first number for lower limit"
+                            required
                         />
                     </div>
 
                     <div class="form-range">
-                        <label for="input-start-range" class="label-input"
+                        <label for="input-end-range" class="label-input"
                             >End Range</label
                         >
                         <input
                             type="number"
-                            name="input-start-range"
-                            id="input-start-range"
+                            name="input-end-range"
+                            id="input-end-range"
+                            placeholder="last number for upper limit"
+                            required
                         />
                     </div>
 
@@ -52,6 +60,8 @@
                             type="text"
                             name="input-maxresult"
                             id="input-maxresult"
+                            placeholder="maximum count for output number"
+                            required
                         />
                     </div>
 
@@ -64,18 +74,37 @@
             </div>
 
             <div class="card-result">
-                <div class="result-card content-card">
+                <div class="result-card content-card" id="result-content">
                     <h1>Random Number Result</h1>
                     <div class="result-list">
                         <ul>
-                            <li>45</li>
-                            <li>23</li>
-                            <li>10</li>
+                            <li>
+                                <div class="number-result-container">23</div>
+                            </li>
+                            <li>
+                                <div class="number-result-container">1</div>
+                            </li>
+                            <li>
+                                <div class="number-result-container">67</div>
+                            </li>
+                            <li>
+                                <div class="number-result-container">46</div>
+                            </li>
+                            <li>
+                                <div class="number-result-container">10</div>
+                            </li>
                         </ul>
                     </div>
+                    <div class="result-none">Result is unavailable</div>
                 </div>
             </div>
         </main>
-        <script type="module" src="./index.js"></script>
+        <div class="toast-container">
+            <div id="toasts">Toast text message...</div>
+        </div>
+        <footer class="footer">
+            <h3 tabindex="10">Copyright &copy; 2021 - Resto Vite</h3>
+        </footer>
+        <script type="module" src="./index.js" defer></script>
     </body>
 </html>
