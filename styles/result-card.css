@@ -26,8 +26,9 @@
     margin: 0;
     padding: 0;
     display: grid;
-    grid-template-columns: repeat(4, 90px);
+    grid-template-columns: repeat(4, 98px);
     grid-template-rows: 50px;
+    column-gap: 18px;
     grid-row-gap: 25px;
     justify-items: center;
     justify-content: center;
@@ -39,7 +40,7 @@
 
 .number-result-container {
     border: 2px dotted #e2703a;
-    width: 60px;
+    width: 96px;
     height: 60px;
     display: flex;
     justify-content: center;

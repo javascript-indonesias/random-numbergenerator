@@ -1,5 +1,7 @@
 import { calculationRandomByRangeInclusive } from './random-number-helper';
 import ToastModalInitiator from './toast-dialog-initiator';
+import getYearDate from './date-utils';
+import createListResultTemplate from './result-template-creator';
 
 const AppNumberGeneratorPage = {
     init() {
@@ -7,6 +9,8 @@ const AppNumberGeneratorPage = {
         this.endRangeEl = document.querySelector('#input-end-range');
         this.maxDataResultEl = document.querySelector('#input-maxresult');
         this.buttonRandomEl = document.querySelector('.action-button');
+        this.h3FooterEl = document.querySelector('.footer h3');
+        this.resultListDiv = document.querySelector('.result-list');
 
         this.dataInput = {
             lowerlimit: 1,
@@ -16,6 +20,7 @@ const AppNumberGeneratorPage = {
 
         ToastModalInitiator.init();
         this.initListenerButton();
+        this.setDateFooter();
     },
     initListenerButton() {
         this.buttonRandomEl.addEventListener('click', (event) => {
@@ -24,6 +29,10 @@ const AppNumberGeneratorPage = {
 
             this.checkDataInput();
         });
+    },
+    setDateFooter() {
+        const intYear = getYearDate();
+        this.h3FooterEl.innerHTML = `Copyright &copy; ${intYear} - Random Number Generator`;
     },
     checkDataInput() {
         const intStartRange = Number.parseInt(this.startRangeEl.value, 10);
@@ -83,9 +92,14 @@ const AppNumberGeneratorPage = {
         const resultArrayValue = await calculationRandomByRangeInclusive(
             this.dataInput,
         );
-        console.log(resultArrayValue);
+
+        this.setResultData(resultArrayValue);
     },
-    setResultData() {},
+    async setResultData(resultlist) {
+        const listRandomNumberEl = await createListResultTemplate(resultlist);
+        this.resultListDiv.innerHTML = '';
+        this.resultListDiv.appendChild(listRandomNumberEl);
+    },
     showToaster(message = '') {
         ToastModalInitiator.showToast(message);
     },
