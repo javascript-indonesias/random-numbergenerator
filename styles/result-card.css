@@ -27,9 +27,9 @@
     padding: 0;
     display: grid;
     grid-template-columns: repeat(4, 98px);
-    grid-template-rows: 50px;
+    grid-template-rows: auto;
     column-gap: 18px;
-    grid-row-gap: 25px;
+    row-gap: 20px;
     justify-items: center;
     justify-content: center;
 }
@@ -39,7 +39,7 @@
 }
 
 .number-result-container {
-    border: 2px dotted #e2703a;
+    border: 2px dotted #ff6f59;
     width: 96px;
     height: 60px;
     display: flex;
@@ -51,11 +51,6 @@
     border-radius: 8px;
 }
 
-.result-none {
-    display: block;
-    font-family: 'Lato', sans-serif;
-    font-weight: 500;
-    font-size: 16pt;
-    color: #393e46;
-    text-align: center;
+.hide-element {
+    display: none;
 }

@@ -13,7 +13,7 @@ const ToastModalInitiator = {
             setTimeout(() => {
                 this.toastElement.classList.remove('show');
                 this.isToastShow = false;
-            }, 3000);
+            }, 2800);
         }
     },
 };

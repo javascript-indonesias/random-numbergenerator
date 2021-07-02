@@ -14,6 +14,7 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    flex: 1 0 auto;
 }
 
 .card-detail {
@@ -60,7 +61,7 @@ body {
 }
 
 .form-range input:focus {
-    border: 2px solid #f15946;
+    border: 2px solid #ff9800;
 }
 
 .label-input {
@@ -75,7 +76,7 @@ body {
 }
 
 .action-button {
-    background: #f94144;
+    background: #33ca7f;
     color: #fff;
     padding: 13px 24px 13px 24px;
     margin: 10px 0 10px 0;
@@ -87,7 +88,7 @@ body {
 }
 
 .action-button:hover {
-    background: #e46554;
+    background: #4bd28f;
 }
 
 hr {
@@ -97,7 +98,7 @@ hr {
 /* https://css-tricks.com/couple-takes-sticky-footer/ */
 .footer {
     flex-shrink: 0;
-    background-color: #f94144;
+    background-color: #21bf73;
     text-align: center;
 }
 

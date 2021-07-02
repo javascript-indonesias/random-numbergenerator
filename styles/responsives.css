@@ -1,0 +1,27 @@
+/* Media query */
+@media screen and (max-width: 528px) {
+    .card-detail {
+        width: 370px;
+    }
+
+    .card-result {
+        width: 370px;
+    }
+
+    .result-list ul {
+        grid-template-columns: repeat(2, 98px);
+        grid-template-rows: auto;
+        column-gap: 16px;
+        row-gap: 20px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .card-detail {
+        width: 320px;
+    }
+
+    .card-result {
+        width: 320px;
+    }
+}
