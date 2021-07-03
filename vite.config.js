@@ -2,6 +2,7 @@ const { resolve } = require('path');
 
 export default {
     base: './',
+    // base: '/randomnumber-generator-web/',
     server: {
         port: 4200,
     },
