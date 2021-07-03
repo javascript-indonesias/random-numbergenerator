@@ -34,6 +34,13 @@ const AppNumberGeneratorPage = {
 
             this.checkDataInput();
         });
+
+        this.h3FooterEl.addEventListener('click', (event) => {
+            event.preventDefault();
+            event.stopPropagation();
+
+            this.openPageAbout();
+        });
     },
     setDateFooter() {
         const intYear = getYearDate();
@@ -136,6 +143,14 @@ const AppNumberGeneratorPage = {
         this.resultListDiv.appendChild(listRandomNumberEl);
 
         showElement(this.cardResultEl);
+    },
+    openPageAbout() {
+        const ahrefElement = document.createElement('a');
+        ahrefElement.href =
+            'https://github.com/javascript-indonesias/random-numbergenerator';
+        ahrefElement.target = '_blank';
+        ahrefElement.setAttribute('rel', 'noopener noreferrer');
+        ahrefElement.click();
     },
     showToaster(message = '') {
         ToastModalInitiator.showToast(message);

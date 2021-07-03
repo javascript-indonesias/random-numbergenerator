@@ -11,7 +11,6 @@ export default {
             // Jika di production, berubah urlnya menjadi alamathost/about
             input: {
                 main: resolve(__dirname, 'index.html'),
-                about: resolve(__dirname, 'about/index.html'),
             },
         },
     },
